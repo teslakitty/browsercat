@@ -8,6 +8,7 @@
     tools:context=".MainActivity"
     tools:ignore="MergeRootFrame">
 
+    <!-- WebView for browsing -->
     <WebView
         android:id="@+id/webView"
         android:layout_width="0dp"
@@ -16,20 +17,34 @@
         app:layout_constraintBottom_toTopOf="@id/editTextText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="8dp"
+        android:layout_margin="16dp"
         android:background="@android:color/white" />
 
+    <!-- EditText for entering URLs -->
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Type to search"
+        android:layout_margin="16dp"
+        android:hint="Enter URL"
         android:inputType="text"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textColorHint="#B0B0B0"
+        android:padding="16dp"
         app:layout_constraintTop_toBottomOf="@id/webView"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button to load the URL into the WebView -->
+    <Button
+        android:id="@+id/loadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load Page"
+        app:layout_constraintTop_toBottomOf="@id/editTextText"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@android:color/white"
-        android:padding="8dp" />
+        android:layout_margin="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
