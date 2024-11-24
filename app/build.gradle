@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.teslakitty.browsercat'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.teslakitty.browsercat"
@@ -36,4 +36,5 @@ dependencies {
     implementation libs.androidx.core.ktx
     implementation libs.androidx.leanback
     implementation libs.glide
+    implementation libs.androidx.constraintlayout
 }
